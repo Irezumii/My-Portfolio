@@ -18,18 +18,9 @@ import cssIMG from './Assets/css.png'
 import reactIMG from './Assets/react.png'
 import pythonIMG from './Assets/python.png'
 import photoshopIMG from './Assets/photoshop.png'
-import { css } from '@emotion/react';
 
 function App() {
 
-  function scrollHome() {
-    console.log("scrolling")
-    window.scrollBy({
-      top: -window.innerHeight * 3,
-      left: 0,
-      behavior: 'smooth'
-    });
-  }
   function handleScroll(el = 1) {
     window.scrollBy({
       top: window.innerHeight * el,
