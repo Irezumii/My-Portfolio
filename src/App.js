@@ -1,5 +1,6 @@
 
 import './App.css';
+import { useState, useEffect, useRef } from 'react';
 import linkedlinImg from './Assets/linkedin.png'
 import githubImg from './Assets/github.png'
 import gmailImg from './Assets/gmail.png'
@@ -20,10 +21,29 @@ import pythonIMG from './Assets/python.png'
 import photoshopIMG from './Assets/photoshop.png'
 
 function App() {
+  const [clicked, setClicked] = useState(false)
+  const [timeoutTrigger, setTimeoutTrigger] = useState(false)
+  const moreBoxRef = useRef(null)
+
+  useEffect(() => {
+    if (clicked) {
+      moreBoxRef.current.style.width = "90%"
+      const timeoutId = setTimeout(() => {
+        setTimeoutTrigger(true)
+      }, 250);
+
+      return () => clearTimeout(timeoutId); // Wyczyszczenie timeoutu po odmontowaniu komponentu
+    }
+  }, [clicked]);
+
+  function handleMore() {
+    setClicked(true)
+  }
 
   function handleScroll(el = 1) {
     window.scrollBy({
-      top: window.innerHeight * el,
+      top: (window.innerHeight - 20) * el,
+      // top: window.innerHeight * el,
       left: 0,
       behavior: 'smooth'
     });
@@ -109,7 +129,7 @@ function App() {
         <img className='arrow-down' src={arrowImg} onClick={() => handleScroll()} alt="" />
         <div className="my-portfolio-code"><span>My Portfolio Code</span></div>
         <div className="my-projects-box">
-          <div className="project-box">
+          {/* <div className="project-box">
             <div className="project-image-box">
               <img className='pad-img' src={padIMG} alt="" />
             </div>
@@ -126,7 +146,7 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="project-box">
             <div className="project-image-box">
               <img className='f1-img' src={f1LogoIMG} alt="" />
@@ -137,15 +157,24 @@ function App() {
               <p>Strona o F1 zawierająca na bierząco aktualizowany ranking kierowców i zespołów, oraz archiwum wszystkich wyścigów od 1950 roku</p>
             </div>
             <div className="project-buttons-box">
-              <div className='more-box'>
-                <div className="more-click-box">
-                  <div className="click">Click</div>
-                  <div className="more">More</div>
-                </div>
+              <div className='more-box' onClick={handleMore} ref={moreBoxRef}>
+                {clicked === false ? <>
+                  <div className="more-click-box">
+                    <div className="click">Click</div>
+                    <div className="more">More</div>
+                  </div>
+                </> : null}
+                {timeoutTrigger === true ?
+                  <div className='code-site-about-box'>
+                    <div className="code-site-about">Code</div>
+                    <div className="code-site-about">Site</div>
+                    <div className="code-site-about">About</div>
+                  </div>
+                  : null}
               </div>
             </div>
           </div>
-          <div className="project-box">
+          {/* <div className="project-box">
             <div className="project-image-box">
               <img className='currency-img' src={currencyIMG} alt="" />
             </div>
@@ -162,7 +191,7 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="full-page-box">
