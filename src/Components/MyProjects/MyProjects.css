@@ -56,7 +56,7 @@
   }
 }
 .hangman-img-box {
-  background-color: aqua;
+  /* background-color: aqua; */
   grid-column: 10 / 48;
   grid-row: 10/91;
   display: flex;
@@ -115,8 +115,8 @@
 
 .f1-image-box {
   grid-column: 21/80;
-  grid-row: 5/ 66;
-  background-color: aqua;
+  grid-row: 5/ 63;
+  /* background-color: aqua; */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -131,8 +131,13 @@
 }
 .f1-description {
   grid-row: 66 / 90;
-  grid-column: 11 / 90;
-  border: 2px solid white;
+  grid-column: 11 / 92;
+  padding-right: 3%;
+  /* border: 2px solid white; */
+  overflow-y: auto;
+  text-align: justify;
+  line-height: 1.3;
+  text-shadow: 5px 3px 8px rgba(0, 0, 0, 0.2);
 }
 .f1-button-box {
   grid-row: 91 / 98;
@@ -155,27 +160,127 @@
   }
 }
 .exchange-everything-image-box {
-  grid-column: 22 / 79;
+  grid-column: 15 / 86;
   grid-row: 5 / 40;
-  background-color: #01eeff;
+  /* background-color: #01eeff; */
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
   border-radius: 20px;
   overflow: hidden;
 }
 .exchange-everything-img {
-  height: 100%;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+  height: 90%;
   width: auto;
+  border-radius: 20px;
 }
 .exchange-everything-description {
-  grid-column: 15 / 86;
-  grid-row: 41 / 75;
-  border: 2px solid white;
+  grid-column: 24 / 79;
+  grid-row: 41 / 84;
+  padding-right: 3%;
+  /* border: 2px solid white; */
+  text-shadow: 5px 3px 8px rgba(0, 0, 0, 0.2);
+  text-align: justify;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column;
+  font-size: 1.07em;
 }
-.exchange-everything-button-box{
+.exchange-everything-button-box {
   grid-column: 38 / 63;
-  grid-row: 76 / 83;
+  grid-row: 86 / 93;
   border: 2px solid #01eeff;
+  border-radius: 20px;
+  font-size: 20px;
+  padding-left: 7%;
+  padding-right: 9%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-shadow: 5px 3px 8px rgba(0, 0, 0, 0.2);
+  & p {
+    cursor: pointer;
+    z-index: 4;
+    &:hover {
+      color: #01eeff;
+    }
+  }
+}
+@media screen and (max-width: 435px) {
+  .my-projects-box {
+    flex-flow: column;
+    justify-content: flex-start;
+    padding-top: 5%;
+  }
+  .back-img{
+    z-index: 5;
+  }
+  .hangman-img-box {
+    grid-column: 10/91;
+    grid-row: 5 / 41;
+  }
+  .hangman-img {
+    height: 110%;
+  }
+  .hangman-description {
+    grid-column: 1/ 101;
+    grid-row: 43 / 85;
+    font-size: 12px;
+    overflow-y: auto;
+    padding-left: 8%;
+    padding-right: 8%;
+    justify-content: flex-start;
+
+  }
+  .hangman-button-box {
+    grid-row: 88 / 95;
+    grid-column: 21 / 81;
+    padding: 0;
+  }
+  .f1-image-box{
+    grid-column: 10/91;
+    grid-row: 5 / 41;
+  }
+  .f1-site-img{
+    height: 90%;
+  }
+  .f1-description {
+    grid-column: 1/ 101;
+    grid-row: 43 / 85;
+    font-size: 12px;
+    overflow-y: auto;
+    padding-left: 8%;
+    padding-right: 8%;
+    justify-content: flex-start;
+
+  }
+  .f1-button-box {
+    grid-row: 88 / 95;
+    grid-column: 21 / 81;
+    padding: 0;
+  }
+  .exchange-everything-image-box{
+    grid-column: 10/91;
+    grid-row: 10 / 31;
+  }
+  .exchange-everything-img{
+    height: 100%;
+  }
+  .exchange-everything-description {
+    grid-column: 1/ 101;
+    grid-row: 33 / 85;
+    font-size: 13px;
+    overflow-y: auto;
+    padding-left: 8%;
+    padding-right: 8%;
+    justify-content: flex-start;
+  }
+  .exchange-everything-button-box {
+    grid-row: 88 / 95;
+    grid-column: 21 / 81;
+    padding: 0;
+  }
 }

@@ -38,7 +38,7 @@ export default function MyProjects({ handleScroll }) {
                                     <p>GitHub</p>
                                 </div>
                                 <div className="hangman-description">
-                                    <p>&nbsp; Prosta gra która posłużyła mi do nauki (pierwszy już taki bardziej zaawansowany projekt który zrobiłem) łączenia
+                                    <p>&nbsp; Prosta gra która posłużyła mi do nauki (pierwszy już taki baardziej niż prosty projekt który zrobiłem) łączenia
                                         JavaScript'u z HTML'em i CSS'em. Nauczyłęm się na niej manipulować DOM'em z poziomu JS.
                                     </p>
                                     <p>&nbsp; Na stronie pierwsze co nas wita to wybór kategori hasła, po wybraniu konkretnej do zmiennej zostaje przypisana
@@ -64,7 +64,17 @@ export default function MyProjects({ handleScroll }) {
                                     <p>Webside</p>
                                     <p>GitHub</p>
                                 </div>
-                                <div className='f1-description'></div>
+                                <div className='f1-description'>
+                                    <p>#&nbsp;Mała stronka o f1 w której znajdują się wszyscy kierowcy sezonu oraz drużyny.</p>
+                                    <p>#&nbsp;Rankingi są podpięte do API i są generowane na jego podstawie, dlatego cały czas wyświetlane są w rich aktualne pozycje kierowców ich punkty oraz pozycje i punkty zespołów.</p>
+                                    <p>#&nbsp;Archiwum jest wizualizacją bazy danych API f1 i przedstawia wszystkie wyścigi, wyniki wyścigów, czasy oraz pozycję kierowców oraz kto zrobił najszybsze okrążenie.
+                                        Pobierane z API jest tylko to co jest niezbędne do wyświetlenia wyników, i jest inicjowane dopiero po wybraniu konkretnej daty czy konkretnego wyścigu.
+                                    </p>
+                                    <p>#&nbsp;Nauczyłem się dzięki temu projektowi pracować z API, unikać niepotrzebnego pobierania danych oraz gdy nie jest to konieczne,
+                                        optymalizować stronę pod kątem wyświetlania i przechowywania elementów DOM (tworzenia ich tylko gdy są potrzebne)
+                                    </p>
+                                    <p>#&nbsp;Do operowania na API pomagałem sobie Postman'em</p>
+                                </div>
                             </>
                             : null}
                         {renderTrigger === "exchangeEverything" ?
@@ -73,8 +83,20 @@ export default function MyProjects({ handleScroll }) {
                                     <img src={exchangeEverythingImg} alt="" className='exchange-everything-img' />
 
                                 </div>
-                                <div className="exchange-everything-button-box"></div>
-                                <div className="exchange-everything-description"></div>
+                                <div className="exchange-everything-button-box">
+                                    <p>Webside</p>
+                                    <p>GitHub</p>
+                                </div>
+                                <div className="exchange-everything-description">
+                                    <p>#&nbsp;Mój do tej pory najbardziej zaawansowany projekt</p>
+                                    <p>#&nbsp;Strona internetowa której celem jest porównywanie wartości walut, kryptowalut oraz akcji, do prawidłowego działąnia strony użyłem API z dwóch róznych źródeł.
+                                        <p>#&nbsp;Niestety API walut jest dosyć ograniczone i niektóre wymiany nie są przez nie wspierane.</p>
+                                        <p>#&nbsp;W zależności od wybranych wartości wykonywana jest konkretna operacja oraz konkretne działanie wyliczające wartośc pierwszej odzwiercieglona w drugiej.</p>
+                                        <p>#&nbsp;Dzięki temu projektowi zrozumiałem bardziej samo API, asynchroniczność pobierania z niego danych, funkcje zwrotne i logikę renderowania pobranych danych. </p>
+                                        <p>#&nbsp;Zrozumiałem też dużo odnośnie renderowania, re-renderowań aplikacji, samych stanów, hook'ów, przepływu danych, jak działa i jak wykożystać localStorage i operowania na ciągle zmieniających się danych.</p>
+                                        <p>#&nbsp;Najtrudniejszym w tym projekcie była dla mnie optymalizacja re-renderów, oraz pobieranie i przedstawianie danych z API tylko wtedy gdy chce i jest to potrzebne</p>
+                                    </p>
+                                </div>
                             </>
                             : null}
                     </div>

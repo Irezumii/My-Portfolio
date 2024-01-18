@@ -39,13 +39,14 @@ export default function Project({ myData, swipeBox, onSetRenderTrigger }) {
             <div className="project-image-box">
                 <img className={myData.imgClass} src={myData.img} alt="" />
             </div>
+            <div className="project-title-box">{myData.title}</div>
             <div className="project-descripttion-box">
                 <div className='technology-box'><h6>{myData.technologies.first}</h6><h6>{myData.technologies.secound}</h6><h6>{myData.technologies.third}</h6></div>
                 <br />
                 <p>{myData.description}</p>
             </div>
             <div className="project-buttons-box">
-                <div className='more-box' onClick={handleMore} ref={moreBoxRef} onMouseLeave={()=>setTimeout(function(){setClicked(false)},300)}>
+                <div className='more-box' onClick={handleMore} ref={moreBoxRef} onBlur={()=>setClicked(false)} onMouseLeave={()=>setTimeout(function(){setClicked(false)},300)}>
                     {clicked === false ? <>
                         <div className="more-click-box">
                             <div className="click">Click</div>

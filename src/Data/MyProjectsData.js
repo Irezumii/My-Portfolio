@@ -6,6 +6,7 @@ export const objData = {
     "hangman": {
         "img": padIMG,
         "imgClass": "pad-img",
+        "title": "Hangman Game",
         "technologies": {
             "first": "JavaScript",
             "secound": "HTML",
@@ -19,6 +20,7 @@ export const objData = {
     "f1": {
         "img": f1LogoIMG,
         "imgClass": "f1-img",
+        "title": "F1 Data",
         "technologies": {
             "first": "React",
             "secound": "HTML",
@@ -32,6 +34,7 @@ export const objData = {
     "exchangeEverything": {
         "img": currencyIMG,
         "imgClass": "currency-img",
+        "title": "Exchange Everything",
         "technologies": {
             "first": "React",
             "secound": "HTML",
