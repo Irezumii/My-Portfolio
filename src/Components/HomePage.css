@@ -4,14 +4,14 @@
   display: flex;
   border-bottom: 4px solid rgb(22, 22, 22);
   justify-content: space-between;
-  & p {
-    -webkit-user-select: none;
-    user-select: none;
-    cursor: pointer;
-    transition: all 0.1s ease;
-    &:hover {
-      color: #01eeff;
-    }
+}
+.full-page-box header p {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  &:hover {
+    color: #01eeff;
   }
 }
 .header-components-left {
@@ -51,158 +51,157 @@
   /* background-color: #01eeff; */
 }
 .icon-box {
-    width: 55%;
-    height: 100%;
-    padding-top: 2%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 4%;
-    & img {
-      height: 30px;
-      width: auto;
-    }
-    /* background-color: aqua; */
+  width: 55%;
+  height: 100%;
+  padding-top: 2%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4%;
+  & img {
+    height: 30px;
+    width: auto;
   }
+  /* background-color: aqua; */
+}
+.introdution {
+  grid-column: 1 / 61;
+  grid-row: 10/101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  text-shadow: 4px 3px 14px rgba(0, 0, 0, 1);
+  font-size: 1.6vw;
+  padding-bottom: 20vh;
+  z-index: 2;
+  position: relative;
+  & h1 {
+    font-weight: 800;
+    font-size: 5vw;
+    margin-top: -14px;
+    margin-bottom: -10px;
+  }
+  & h2 {
+    font-weight: 800;
+    font-size: 3vw;
+    margin-top: -5px;
+    color: #01eeff;
+    margin-bottom: 10px;
+  }
+}
+.introdution-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column;
+  padding-top: 15%;
+}
+@media screen and (min-width: 1920px) {
   .introdution {
-    grid-column: 1 / 61;
-    grid-row: 10/101;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-    text-shadow: 4px 3px 14px rgba(0, 0, 0, 1);
-    font-size: 1.6vw;
-    padding-bottom: 20vh;
-    z-index: 2;
-    position: relative;
+    font-size: 31px;
     & h1 {
-      font-weight: 800;
-      font-size: 5vw;
-      margin-top: -14px;
-      margin-bottom: -10px;
+      font-size: 95px;
     }
     & h2 {
-      font-weight: 800;
-      font-size: 3vw;
-      margin-top: -5px;
-      color: #01eeff;
-      margin-bottom: 10px;
+      font-size: 58px;
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  .introdution {
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 980px) {
+  .introdution {
+    font-size: 16px;
+    & h1 {
+      font-size: 50px;
+    }
+    & h2 {
+      font-size: 30px;
+    }
+  }
+}
+.tech-stack {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 320px;
+  gap: 5%;
+}
+.tech-img {
+  width: 35px;
+  height: auto;
+}
+.my-photo {
+  grid-column: 1/101;
+  grid-row: 10/101;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+  & img {
+    transition: height 0.2s ease;
+    height: 99%;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+  }
+}
+@media screen and (max-width: 1200px) {
+  .my-photo {
+    & img {
+      height: 90%;
+    }
+  }
+}
+@media screen and (max-width: 435px) {
+  .full-page-box header {
+    grid-row: 1 / 17;
+    flex-flow: column;
+    border-bottom: 3px solid rgb(22, 22, 22);
+  }
+  .header-components-left {
+    width: 100%;
+    font-size: 4vw;
+    border-bottom: 3px solid rgb(22, 22, 22);
+  }
+  .header-components-right {
+    width: 100%;
+    font-size: 4vw;
+  }
+  .icon-box {
+    justify-content: center;
+    gap: 7%;
+    width: 50%;
+    & img {
+      height: 7vw;
+    }
+  }
+  .code-img {
+    display: none;
+  }
+  .introdution {
+    grid-row: 20 / 51;
+    grid-column: 1 / 101;
+    /* background-color: #01eeff; */
+    /* justify-content: flex-start; */
+    font-size: 2.5vh;
+    & h1 {
+      font-size: 5vh;
+      margin-top: -2%;
+      margin-bottom: -1%;
+    }
+    & h2 {
+      font-size: 3vh;
     }
   }
   .introdution-content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-flow: column;
-    padding-top: 15%;
-  }
-  @media screen and (min-width: 1920px) {
-    .introdution {
-      font-size: 31px;
-      & h1 {
-        font-size: 95px;
-      }
-      & h2 {
-        font-size: 58px;
-      }
-    }
-  }
-  @media screen and (max-width: 1400px) {
-    .introdution {
-      justify-content: flex-start;
-    }
-  }
-  @media screen and (max-width: 980px) {
-    .introdution {
-      font-size: 16px;
-      & h1 {
-        font-size: 50px;
-      }
-      & h2 {
-        font-size: 30px;
-      }
-    }
-  }
-  .tech-stack{
-    margin-top: 10px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    min-width: 320px;
-    gap: 5%;
-  }
-  .tech-img{
-    width: 35px;
-    height: auto;
+    padding-top: 0%;
   }
   .my-photo {
-    grid-column: 1/101;
-    grid-row: 10/101;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    overflow: hidden;
-    & img {
-      transition: height 0.2s ease;
-      height: 99%;
-      filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
-    }
+    grid-row: 31 / 101;
+    justify-content: center;
   }
-  @media screen and (max-width: 1200px) {
-    .my-photo {
-      & img {
-        height: 90%;
-      }
-    }
-  }
-  @media screen and (max-width: 435px) {
-    .full-page-box header{
-      grid-row: 1 / 17;
-      flex-flow: column;
-      border-bottom: 3px solid rgb(22, 22, 22);
-
-    }
-    .header-components-left{
-      width: 100%;
-      font-size: 4vw;
-      border-bottom: 3px solid rgb(22, 22, 22);
-    }
-    .header-components-right{
-      width: 100%;
-      font-size: 4vw;
-    }
-    .icon-box{
-      justify-content: center;
-      gap: 7%;
-      width: 50%;
-      & img{
-        height: 7vw;
-      }
-    }
-    .code-img{
-      display: none;
-    }
-    .introdution{
-      grid-row: 20 / 51;
-      grid-column: 1 / 101;
-      /* background-color: #01eeff; */
-      /* justify-content: flex-start; */
-      font-size: 2.5vh;
-      & h1{
-        font-size: 5vh;
-        margin-top: -2%;
-        margin-bottom: -1%;
-      }
-      & h2{
-        font-size: 3vh ;
-      }
-    }
-    .introdution-content{
-      padding-top: 0%;
-    }
-    .my-photo{
-      grid-row: 31 / 101;
-      justify-content: center;
-    }
-  }
+}

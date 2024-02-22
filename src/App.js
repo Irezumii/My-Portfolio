@@ -32,7 +32,7 @@ function App() {
         <img className='arrow-home' src={arrowHomeIMG} onClick={() => handleScroll(-3)} alt="" />
         <img className='arrow-down' src={arrowImg} onClick={() => handleScroll()} alt="" />
         <div className='my-knowledge-info-box'>
-          <p>My knowledge</p>
+        <p>My knowledge</p>
           <div className='my-knowledge-info'>
             <p> &nbsp;&nbsp;Swoją przygodę z nauką programowania zacząłem od pythona ,na bazie którego uczyłem się podstaw programowania takich jak
               <img className='python-img' src={pythonImg} alt="python-img" />
@@ -43,7 +43,7 @@ function App() {
                 <li>instrukcje warunkowe</li>
                 <li>itp.</li>
               </ul>
-              &nbsp;&nbsp;Zrozumiałem bardzo dużo podstaw kierujących światem programowania jak naprzykład <ul><li>jak działają algorytmy</li><li>co to jest złożoność obliczeniowa</li><li>rekurencja</li><li>tablice hashujące</li><li>czym jest programowanie Obiektowe, co to są obiekty, klasy oraz instancje obiektów.</li></ul></p>
+              &nbsp;&nbsp;Zrozumiałem bardzo dużo podstaw kierujących światem programowania jak na przykład <ul><li>jak działają algorytmy</li><li>co to jest złożoność obliczeniowa</li><li>rekurencja</li><li>tablice hashujące</li><li>czym jest programowanie Obiektowe, co to są obiekty, klasy oraz instancje obiektów.</li></ul></p>
             <div style={{ clear: "both" }}></div>
             <p> Po zrozumianiu podstaw i zasad działania języka programowania , musiałem wbrać stronę w którą będę podążał z dalszym rozwijaniem wiedzy.
               Wybrałęm drogę fullstack developera ponieważ lubię wiedzieć wszystko co się dzieje wokół mnie czy to w projekcie czy w życiu, stwierdziłem że to będzie cięzka droga ale jednak najbardziej mi odpowiadająca.
@@ -76,13 +76,13 @@ function App() {
                 <li>jak pracować na zmiennych i stałych</li>
                 <li>co to jest this, i jakie przybiera formy w zależności od kontekstu</li>
               </ul>
-              <div style={{ clear: "both" }}></div>
+              <div style={{clear: "both"}}></div>
             </p>
             <p>Czas poświęcany na naukę starałem się rozdzielać po równo pomiędzy więdzę teoretczną a pisanie własnych projektów.
-              Napisałem ich wiele, mniejszych czy większych i poznając nową technologie, czy nowy sposób upraszaczania czegoś starałem się zawsze wracać do poprzednich projektów i implementować te nową wiedzę we wcześniej napisane już projekty.</p>
+              Napisałem ich wiele, mniejszych czy większych i poznając nową technologie, czy nowy sposób upraszaczania czegoś starałem się zawsze wracać i implementować te nową wiedzę we te już wcześniej napisane projekty.</p>
             <br />
-            <p>Czując się już w miarę pewnie w Vanilla JavaScript zacząłem się uczyć bilbioteki React. Bardzo mi się ona spodobała,a zwłaszcza problemy które rozwiązuje i rzeczy które upraszacza w porównaniu do Vanilla Javascript</p>
-            <img src={reactImg} alt="react img" className='react-img' />
+            <p>Czując się już w miarę pewnie w Vanilla JavaScript zacząłem się uczyć bilbioteki React. Bardzo mi się ona spodobała,a zwłaszcza problemy które rozwiązuje i rzeczy które upraszacza</p>
+              <img src={reactImg} alt="react img" className='react-img' />
             <p>Dowiedziałem się jeszcze więcej o
               <ul className='ul-react'>
                 <li>asynchroniczności</li>
@@ -105,7 +105,7 @@ function App() {
                 <li>sposób kierowania danych w react "one way data flow"</li>
               </ul>
             </p>
-            <p>Po tym jak zacząłem sie czuć już w miarte swobodnie w react, przepisałem do React'a dwa moim zdaniem najlepsze projekty które zrobiłem i stworzyłem jeden projekt od zera (exchange everything). wszystkie te projekty znajdują się w moim portfolio</p>
+            <p>Po tym jak zacząłem sie czuć już w miarte swobodnie w react, przepisałem dwa moim zdaniem najlepsze projekty które zrobiłem i stworzyłem jeden projekt od zera (wszystkie projekty są opisane w "My Projects").</p>
             <br />
             <p>Cały czas sie rozwijam ,uczę się zawsze jak mam wolny czas. Jestem w pełni zaangażowany żeby zostać dobrym programistą i robić to co sprawaia mi tyle przyjemności. Czyli programować</p>
           </div>
