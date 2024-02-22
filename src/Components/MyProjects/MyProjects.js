@@ -101,7 +101,7 @@ export default function MyProjects({ handleScroll }) {
                             : null}
                     </div>
                     <div className='right-swipe-half'>
-                        <div className="my-portfolio-code"><span>My Portfolio Code</span></div>
+                        <div className="my-portfolio-code"><span>My Portfolio's Code</span></div>
                         <div className="my-projects-box">
                             <Project myData={objData.hangman} swipeBox={swipeBox} onSetRenderTrigger={setRenderTrigger} />
                             <Project myData={objData.f1} swipeBox={swipeBox} onSetRenderTrigger={setRenderTrigger} />

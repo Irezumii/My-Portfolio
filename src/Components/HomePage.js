@@ -29,11 +29,11 @@ export default function HomePage({ handleScroll }) {
                     </div>
                     <div className='header-components-right'>
                         <div className="icon-box">
-                            <a href=''>
+                            <a href='https://www.linkedin.com/in/konrad-sordyl-9ba787267/'>
                                 <img src={linkedlinImg} alt="" />
                             </a>
                             <a href=''>
-                                <img src={githubImg} alt="" />
+                                <img src={githubImg} alt="https://github.com/Irezumii" />
                             </a>
                             <a href=''>
                                 <img src={gmailImg} alt="" />
