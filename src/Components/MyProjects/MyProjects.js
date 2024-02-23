@@ -22,9 +22,8 @@ export default function MyProjects({ handleScroll }) {
     }
     return (
         <>
-            <div className="full-page-box">
-                <img className='arrow-home' src={arrowHomeIMG} onClick={() => handleScroll(-2)} alt="" />
-                <img className='arrow-down' src={arrowImg} onClick={() => handleScroll()} alt="" />
+                <img className='arrow-home' src={arrowHomeIMG} onClick={() => handleScroll()} alt="" />
+                <img className='arrow-down' src={arrowImg} onClick={() => handleScroll("myKnowledge")} alt="" />
                 <div className='swipe-to-about'>
                     <div className='left-swipe-half' ref={swipeBox}>
                         <img className='back-img' src={backImg} alt="" onClick={handleSwipe} />
@@ -34,8 +33,8 @@ export default function MyProjects({ handleScroll }) {
                                     <img src={hangmanImg} alt="" className='hangman-img' />
                                 </div>
                                 <div className="hangman-button-box">
-                                    <p>Webside</p>
-                                    <p>GitHub</p>
+                                    <a href='https://hangman-react-tau.vercel.app/' target='_blank' rel='noreferrer'> <p>Webside</p></a>
+                                    <a href='https://github.com/Irezumii/hangman-react.git' target='_blank' rel='noreferrer'><p>GitHub</p></a>
                                 </div>
                                 <div className="hangman-description">
                                     <p>&nbsp; Prosta gra która posłużyła mi do nauki (pierwszy już taki baardziej niż prosty projekt który zrobiłem) łączenia
@@ -61,8 +60,8 @@ export default function MyProjects({ handleScroll }) {
 
                                 </div>
                                 <div className="f1-button-box">
-                                    <p>Webside</p>
-                                    <p>GitHub</p>
+                                    <a href='https://f1-react-webside.vercel.app/' target='_blank' rel='noreferrer'><p>Webside</p></a>
+                                    <a href='https://github.com/Irezumii/f1-react-webside.git' target='_blank' rel='noreferrer'><p>GitHub</p></a>
                                 </div>
                                 <div className='f1-description'>
                                     <p>#&nbsp;Mała stronka o f1 w której znajdują się wszyscy kierowcy sezonu oraz drużyny.</p>
@@ -84,8 +83,8 @@ export default function MyProjects({ handleScroll }) {
 
                                 </div>
                                 <div className="exchange-everything-button-box">
-                                    <p>Webside</p>
-                                    <p>GitHub</p>
+                                    <a href='http://exchange-everything.wuaze.com/?i=1' target='_blank' rel='noreferrer'><p>Webside</p></a>
+                                    <a href='https://github.com/Irezumii/exchange-everythingv2.git' target='_blank' rel='noreferrer'> <p>GitHub</p></a>
                                 </div>
                                 <div className="exchange-everything-description">
                                     <p>#&nbsp;Mój do tej pory najbardziej zaawansowany projekt</p>
@@ -101,7 +100,7 @@ export default function MyProjects({ handleScroll }) {
                             : null}
                     </div>
                     <div className='right-swipe-half'>
-                        <div className="my-portfolio-code"><span>My Portfolio's Code</span></div>
+                        <div className="my-portfolio-code"><a href='https://github.com/Irezumii/My-Portfolio' target='_blank' rel='noreferrer'><span>My Portfolio's Code</span></a></div>
                         <div className="my-projects-box">
                             <Project myData={objData.hangman} swipeBox={swipeBox} onSetRenderTrigger={setRenderTrigger} />
                             <Project myData={objData.f1} swipeBox={swipeBox} onSetRenderTrigger={setRenderTrigger} />
@@ -109,7 +108,6 @@ export default function MyProjects({ handleScroll }) {
                         </div>
                     </div>
                 </div>
-            </div>
         </>
     )
 }

@@ -35,8 +35,8 @@ body {
     rgba(50, 56, 70, 1) 65%,
     rgba(32, 36, 45, 1) 100%
   );
-  height: 95vh;
-  width: 95vw;
+  height: 100vh;
+  width: 97vw;
   border-radius: 30px;
   overflow: hidden;
   -webkit-box-shadow: 26px 39px 79px -20px rgba(6, 6, 6, 1);
@@ -45,6 +45,10 @@ body {
   margin-top: 2.5vh;
   margin-bottom: 2.5vh;
   position: relative;
+  border: 1px solid rgb(78, 75, 75);
+}
+.full-page-box:nth-child(1) {
+  margin-top: 0px;
 }
 .arrow-down {
   position: absolute;

@@ -1,38 +1,58 @@
-
 import './App.css';
+import { useRef } from 'react';
 import pythonImg from './Assets/python.png'
 import htmlImg from './Assets/html.png'
 import cssImg from './Assets/css.png'
 import javaScriptImg from './Assets/javascript.png'
 import reactImg from './Assets/react.png'
-
 import arrowImg from './Assets/arrow.png'
 import arrowHomeIMG from './Assets/arrow-home.png'
-
 import HomePage from './Components/HomePage';
 import AboutMe from './Components/AboutMe';
 import MyProjects from './Components/MyProjects/MyProjects';
 
 function App() {
+  const homeScroll = useRef(null)
+  const aboutMeScroll = useRef(null)
+  const myProjectsScroll = useRef(null)
+  const myKnowledgeScroll = useRef(null)
 
-  function handleScroll(el = 1) {
-    window.scrollBy({
-      top: (window.innerHeight - 20) * el,
-      left: 0,
-      behavior: 'smooth'
-    });
+  function handleScroll(targetRef) {
+    let temp;
+    switch (true) {
+      case targetRef === "aboutMe":
+        temp = aboutMeScroll.current
+        break
+      case targetRef === "myProjects":
+        temp = myProjectsScroll.current
+        break
+      case targetRef === "myKnowledge":
+        temp = myKnowledgeScroll.current
+        break
+      default:
+        temp = homeScroll.current
+        break
+    }
+    if (temp) {
+      temp.scrollIntoView({ behavior: 'smooth' });
+    }
   }
   return (
     <>
-      <HomePage handleScroll={handleScroll} />
-      <AboutMe handleScroll={handleScroll} />
-      <MyProjects handleScroll={handleScroll} />
-
-      <div className="full-page-box">
-        <img className='arrow-home' src={arrowHomeIMG} onClick={() => handleScroll(-3)} alt="" />
-        <img className='arrow-down' src={arrowImg} onClick={() => handleScroll()} alt="" />
+      <div className="full-page-box" ref={homeScroll}>
+        <HomePage handleScroll={handleScroll} />
+      </div>
+      <div className="full-page-box" ref={aboutMeScroll}>
+        <AboutMe handleScroll={handleScroll} />
+      </div>
+      <div className="full-page-box" ref={myProjectsScroll}>
+        <MyProjects handleScroll={handleScroll} />
+      </div>
+      <div className="full-page-box" ref={myKnowledgeScroll}>
+        <img className='arrow-home' src={arrowHomeIMG} onClick={() => handleScroll()} alt="" />
+        {/* <img className='arrow-down' src={arrowImg} onClick={() => handleScroll()} alt="" /> */}
         <div className='my-knowledge-info-box'>
-        <p>My knowledge</p>
+          <p>My knowledge</p>
           <div className='my-knowledge-info'>
             <p> &nbsp;&nbsp;Swoją przygodę z nauką programowania zacząłem od pythona ,na bazie którego uczyłem się podstaw programowania takich jak
               <img className='python-img' src={pythonImg} alt="python-img" />
@@ -76,13 +96,13 @@ function App() {
                 <li>jak pracować na zmiennych i stałych</li>
                 <li>co to jest this, i jakie przybiera formy w zależności od kontekstu</li>
               </ul>
-              <div style={{clear: "both"}}></div>
+              <div style={{ clear: "both" }}></div>
             </p>
             <p>Czas poświęcany na naukę starałem się rozdzielać po równo pomiędzy więdzę teoretczną a pisanie własnych projektów.
               Napisałem ich wiele, mniejszych czy większych i poznając nową technologie, czy nowy sposób upraszaczania czegoś starałem się zawsze wracać i implementować te nową wiedzę we te już wcześniej napisane projekty.</p>
             <br />
             <p>Czując się już w miarę pewnie w Vanilla JavaScript zacząłem się uczyć bilbioteki React. Bardzo mi się ona spodobała,a zwłaszcza problemy które rozwiązuje i rzeczy które upraszacza</p>
-              <img src={reactImg} alt="react img" className='react-img' />
+            <img src={reactImg} alt="react img" className='react-img' />
             <p>Dowiedziałem się jeszcze więcej o
               <ul className='ul-react'>
                 <li>asynchroniczności</li>
@@ -110,8 +130,6 @@ function App() {
             <p>Cały czas sie rozwijam ,uczę się zawsze jak mam wolny czas. Jestem w pełni zaangażowany żeby zostać dobrym programistą i robić to co sprawaia mi tyle przyjemności. Czyli programować</p>
           </div>
         </div>
-
-
       </div>
     </>
   );

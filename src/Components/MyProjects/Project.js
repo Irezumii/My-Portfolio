@@ -55,8 +55,8 @@ export default function Project({ myData, swipeBox, onSetRenderTrigger }) {
                     </> : null}
                     {timeoutTrigger === true ?
                         <div className='code-site-about-box'>
-                            <div className="code-site-about">Code</div>
-                            <div className="code-site-about">Site</div>
+                            <div className="code-site-about"><a href={myData.codeLink} target="_blank" rel="noreferrer">Code</a></div>
+                            <div className="code-site-about"><a href={myData.siteLink} target="_blank" rel="noreferrer">Site</a></div>
                             <div className="code-site-about" onClick={handleAbout}>About</div>
                         </div>
                         : null}

@@ -6,11 +6,12 @@ import './AboutMe.css'
 
 
 
-export default function AboutMe({handleScroll}) {
+export default function AboutMe({ handleScroll }) {
     return (
-        <div className="full-page-box">
-            <img className='arrow-home' src={arrowHomeIMG} onClick={() => handleScroll(-1)} alt="" />
-            <img className='arrow-down' src={arrowImg} onClick={() => handleScroll()} alt="" />
+        // <div className="full-page-box">
+        <>
+            <img className='arrow-home' src={arrowHomeIMG} onClick={() => handleScroll()} alt="" />
+            <img className='arrow-down' src={arrowImg} onClick={() => handleScroll("myProjects")} alt="" />
             <dic className='sushi-img-box' >
                 <img className='sushi-img' src={sushiIMG} alt="" />
             </dic>
@@ -32,6 +33,7 @@ export default function AboutMe({handleScroll}) {
                     <p>Lubię gotować i sam tworzyć nowe potrawy z uzyciem niestandardowych metod</p>
                 </div>
             </div>
-        </div>
+        </>
+        // </div>
     )
 }
