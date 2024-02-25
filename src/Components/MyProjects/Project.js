@@ -1,9 +1,7 @@
 import { useState,useEffect, useRef } from "react";
-
 import './Project.css'
 
 export default function Project({ myData, swipeBox, onSetRenderTrigger }) {
-
     const [clicked, setClicked] = useState(false)
     const [timeoutTrigger, setTimeoutTrigger] = useState(false)
     const moreBoxRef = useRef(null)
@@ -14,14 +12,14 @@ export default function Project({ myData, swipeBox, onSetRenderTrigger }) {
             const timeoutId = setTimeout(() => {
                 setTimeoutTrigger(true)
             }, 250);
-            return () => clearTimeout(timeoutId); // Wyczyszczenie timeoutu po odmontowaniu komponentu
+            return () => clearTimeout(timeoutId)
         }
         if (!clicked) {
             moreBoxRef.current.style.width = "100px"
             const timeoutId = setTimeout(() => {
                 setTimeoutTrigger(false)
             }, 250);
-            return () => clearTimeout(timeoutId); // Wyczyszczenie timeoutu po odmontowaniu komponentu
+            return () => clearTimeout(timeoutId)
         }
     }, [clicked]);
 
@@ -37,7 +35,7 @@ export default function Project({ myData, swipeBox, onSetRenderTrigger }) {
     return (
         <div className="project-box">
             <div className="project-image-box">
-                <img className={myData.imgClass} src={myData.img} alt="" />
+                <img className={myData.imgClass} src={myData.img} alt="" onClick={handleAbout}/>
             </div>
             <div className="project-title-box">{myData.title}</div>
             <div className="project-descripttion-box">

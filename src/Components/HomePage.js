@@ -1,7 +1,5 @@
 import linkedlinImg from '../Assets/linkedin.png'
 import githubImg from '../Assets/github.png'
-import gmailImg from '../Assets/gmail.png'
-import phoneImg from '../Assets/phone.png'
 import faceImg from '../Assets/IMG-6059 (1).png'
 import arrowImg from '../Assets/arrow.png'
 import codeIMG from '../Assets/code.png'
@@ -11,14 +9,12 @@ import cssIMG from '../Assets/css.png'
 import reactIMG from '../Assets/react.png'
 import pythonIMG from '../Assets/python.png'
 import photoshopIMG from '../Assets/photoshop.png'
-
 import './HomePage.css'
-
 
 export default function HomePage({ handleScroll }) {
     return (
         <>
-            <img className="arrow-down" src={arrowImg} onClick={() => handleScroll("aboutMe")} />
+            <img className="arrow-down" src={arrowImg} onClick={() => handleScroll("aboutMe")} alt=''/>
             <header>
                 <div className="header-components-left">
                     <img className='code-img' src={codeIMG} alt="" />
@@ -28,20 +24,14 @@ export default function HomePage({ handleScroll }) {
                 </div>
                 <div className='header-components-right'>
                     <div className="icon-box">
-                        <a href='https://www.linkedin.com/in/konrad-sordyl-9ba787267/'>
+                        <a href='https://www.linkedin.com/in/konrad-sordyl-9ba787267/' target="_blank" rel="noreferrer">
                             <img src={linkedlinImg} alt="" />
                         </a>
-                        <a href=''>
-                            <img src={githubImg} alt="https://github.com/Irezumii" />
-                        </a>
-                        <a href=''>
-                            <img src={gmailImg} alt="" />
-                        </a>
-                        <a href=''>
-                            <img src={phoneImg} alt="" />
+                        <a href='https://github.com/Irezumii' target='_blank' rel="noreferrer">
+                            <img src={githubImg} alt="" />
                         </a>
                     </div>
-                    <p>Download CV</p>
+                    <a href='' target='_blank' rel='noreferrer' download><p>Download CV</p></a>
                 </div>
             </header>
             <div className="introdution">
