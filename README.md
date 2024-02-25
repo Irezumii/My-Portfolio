@@ -1,4 +1,4 @@
-# Value Comparison App
+# Portfolio App
 
 Konrad Sordyl's Portfolio
 
