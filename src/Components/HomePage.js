@@ -31,7 +31,7 @@ export default function HomePage({ handleScroll }) {
                             <img src={githubImg} alt="" />
                         </a>
                     </div>
-                    <a href='' target='_blank' rel='noreferrer' download><p>Download CV</p></a>
+                    <a href='https://drive.google.com/file/d/1_AQQERovU0ARNLCpxrJ-BxSGK3f0eef6/view?usp=sharing' target='_blank' rel='noreferrer' download><p>Download CV</p></a>
                 </div>
             </header>
             <div className="introdution">
